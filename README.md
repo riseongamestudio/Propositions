@@ -21,7 +21,7 @@ Package `com.riseon.propositions`, namespace `RiseOn.Propositions`.
 | Phụ thuộc | Cách có | Dùng cho |
 |---|---|---|
 | Unity 6000.3 | | Bản đang dùng để phát triển |
-| [`com.riseon.utils`](https://github.com/riseongamestudio/Utils/tree/main/Core#readme) 1.0.0 | Tự cài theo `package.json` | Lớp nền `MonoBehaviourExt`, `ScriptableObjectExt` |
+| [`com.riseon.utils`](https://github.com/riseongamestudio/Utils/tree/main/Core#readme) 1.0.0 | Tự cài theo `package.json` của Serializables | `com.riseon.serializables` cần |
 | [`com.riseon.serializables`](https://github.com/riseongamestudio/Serializables#readme) 1.0.0 | Tự cài theo `package.json` | `SerRef`, `ListSerRef`, `SerObject` |
 | [Odin Inspector](https://odininspector.com) | Cài tay từ Asset Store | Ô chọn type cho `[SerializeReference]`, `[TypeRegistryItem]`, `[Required]` |
 | [DOTween](https://dotween.demigiant.com) | Cài tay từ Asset Store | `com.riseon.utils` cần |

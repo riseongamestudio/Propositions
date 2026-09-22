@@ -1,7 +1,7 @@
-using RiseOn.Utils;
+using UnityEngine;
 
 namespace RiseOn.Propositions {
-    public abstract class PropositionComp : MonoBehaviourExt, IProposition {
+    public abstract class PropositionComp : MonoBehaviour, IProposition {
         public abstract bool Evaluate();
     }
 }

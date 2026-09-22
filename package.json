@@ -8,7 +8,6 @@
     "name": "RiseOn"
   },
   "dependencies": {
-    "com.riseon.utils": "1.0.0",
     "com.riseon.serializables": "1.0.0"
   }
 }

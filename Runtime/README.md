@@ -8,8 +8,8 @@
 |---|---|
 | `IProposition` | Chỉ có `bool Evaluate()` |
 | `Proposition` | Base cho mệnh đề lưu inline (`[Serializable]`, dùng qua `[SerializeReference]`) |
-| `PropositionComp` | Base cho mệnh đề là component trong scene, kế thừa `MonoBehaviourExt` |
-| `PropositionSO` | Base cho mệnh đề là asset, kế thừa `ScriptableObjectExt`; `ASSET_MENU_PATH` là `RiseOn/Propositions/` |
+| `PropositionComp` | Base cho mệnh đề là component trong scene, kế thừa `MonoBehaviour` |
+| `PropositionSO` | Base cho mệnh đề là asset, kế thừa `ScriptableObject`; `ASSET_MENU_PATH` là `RiseOn/Propositions/` |
 
 Field nhận một mệnh đề: `[SerializeReference] IProposition` hoặc
 `SerRef<IProposition>`. Nhận nhiều: `ListSerRef<IProposition>`, không dùng

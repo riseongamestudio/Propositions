@@ -2,8 +2,7 @@
     "name": "RiseOn.Propositions",
     "rootNamespace": "RiseOn.Propositions",
     "references": [
-        "RiseOn.Serializables",
-        "RiseOn.Utils"
+        "RiseOn.Serializables"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],
