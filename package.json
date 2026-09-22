@@ -1,0 +1,14 @@
+{
+  "name": "com.riseon.propositions",
+  "version": "1.0.0",
+  "displayName": "Propositions",
+  "description": "Logic propositions composed in the Inspector: formulas with And/Or/AtLeast/AtMost, negation, constants and external sources",
+  "documentationUrl": "https://github.com/riseongamestudio/Propositions/blob/v1.0.0/README.md",
+  "author": {
+    "name": "RiseOn"
+  },
+  "dependencies": {
+    "com.riseon.utils": "1.0.0",
+    "com.riseon.serializables": "1.0.0"
+  }
+}

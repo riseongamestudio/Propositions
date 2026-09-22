@@ -1,0 +1,17 @@
+{
+    "name": "RiseOn.Propositions",
+    "rootNamespace": "RiseOn.Propositions",
+    "references": [
+        "RiseOn.Serializables",
+        "RiseOn.Utils"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
