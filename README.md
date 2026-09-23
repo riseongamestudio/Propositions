@@ -24,10 +24,9 @@ Package `com.riseon.propositions`, namespace `RiseOn.Propositions`.
 | [`com.riseon.utils`](https://github.com/riseongamestudio/Utils/tree/main/Core#readme) 1.0.0 | Tự cài theo `package.json` của Serializables | `com.riseon.serializables` cần |
 | [`com.riseon.serializables`](https://github.com/riseongamestudio/Serializables#readme) 1.0.0 | Tự cài theo `package.json` | `SerRef`, `ListSerRef`, `SerObject` |
 | [Odin Inspector](https://odininspector.com) | Cài tay từ Asset Store | Ô chọn type cho `[SerializeReference]`, `[TypeRegistryItem]`, `[Required]` |
-| [DOTween](https://dotween.demigiant.com) | Cài tay từ Asset Store | `com.riseon.utils` cần |
 
 "Tự cài" là khi cài qua OpenUPM; cài bằng git URL thì phải cài các package RiseOn
-kia trước. Odin và DOTween không có trên UPM nên phải cài vào project trước.
+kia trước. Odin không có trên UPM nên phải cài vào project trước.
 
 ## Cài đặt
 
