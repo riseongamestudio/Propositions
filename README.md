@@ -27,6 +27,7 @@ Package `com.riseon.propositions`, namespace `RiseOn.Propositions`.
 
 "Tự cài" là khi cài qua OpenUPM; cài bằng git URL thì phải cài các package RiseOn
 kia trước. Odin không có trên UPM nên phải cài vào project trước.
+Thiếu Odin thì project báo một lỗi từ `RiseOn.Propositions.Requirements`.
 
 ## Cài đặt
 
@@ -43,7 +44,7 @@ kia trước. Odin không có trên UPM nên phải cài vào project trước.
     }
   ],
   "dependencies": {
-    "com.riseon.propositions": "1.0.2"
+    "com.riseon.propositions": "1.0.3"
   }
 }
 ```
@@ -52,7 +53,7 @@ kia trước. Odin không có trên UPM nên phải cài vào project trước.
 *Package Manager → + → Add package from git URL*:
 
 ```
-https://github.com/riseongamestudio/Propositions.git#v1.0.2
+https://github.com/riseongamestudio/Propositions.git#v1.0.3
 ```
 
 **Thư mục local**: `"com.riseon.propositions": "file:D:/path/to/Propositions"`.
