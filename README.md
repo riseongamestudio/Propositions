@@ -43,7 +43,7 @@ kia trước. Odin không có trên UPM nên phải cài vào project trước.
     }
   ],
   "dependencies": {
-    "com.riseon.propositions": "1.0.0"
+    "com.riseon.propositions": "1.0.1"
   }
 }
 ```
@@ -52,7 +52,7 @@ kia trước. Odin không có trên UPM nên phải cài vào project trước.
 *Package Manager → + → Add package from git URL*:
 
 ```
-https://github.com/riseongamestudio/Propositions.git#v1.0.0
+https://github.com/riseongamestudio/Propositions.git#v1.0.1
 ```
 
 **Thư mục local**: `"com.riseon.propositions": "file:D:/path/to/Propositions"`.
