@@ -22,7 +22,7 @@ Package `com.riseon.propositions`, namespace `RiseOn.Propositions`.
 |---|---|---|
 | Unity 6000.3 | | Bản đang dùng để phát triển |
 | [`com.riseon.utils`](https://github.com/riseongamestudio/Utils/tree/main/Core#readme) 1.0.0 | Tự cài theo `package.json` của Serializables | `com.riseon.serializables` cần |
-| [`com.riseon.serializables`](https://github.com/riseongamestudio/Serializables#readme) 1.0.0 | Tự cài theo `package.json` | `SerRef`, `ListSerRef`, `SerObject` |
+| [`com.riseon.serializables`](https://github.com/riseongamestudio/Serializables#readme) 1.0.1 | Tự cài theo `package.json` | `SerRef`, `ListSerRef`, `SerObject` |
 | [Odin Inspector](https://odininspector.com) | Cài tay từ Asset Store | Ô chọn type cho `[SerializeReference]`, `[TypeRegistryItem]`, `[Required]` |
 
 "Tự cài" là khi cài qua OpenUPM; cài bằng git URL thì phải cài các package RiseOn
@@ -43,7 +43,7 @@ kia trước. Odin không có trên UPM nên phải cài vào project trước.
     }
   ],
   "dependencies": {
-    "com.riseon.propositions": "1.0.1"
+    "com.riseon.propositions": "1.0.2"
   }
 }
 ```
@@ -52,7 +52,7 @@ kia trước. Odin không có trên UPM nên phải cài vào project trước.
 *Package Manager → + → Add package from git URL*:
 
 ```
-https://github.com/riseongamestudio/Propositions.git#v1.0.1
+https://github.com/riseongamestudio/Propositions.git#v1.0.2
 ```
 
 **Thư mục local**: `"com.riseon.propositions": "file:D:/path/to/Propositions"`.
