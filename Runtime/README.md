@@ -8,11 +8,10 @@
 |---|---|
 | `IProposition` | Chỉ có `bool Evaluate()` |
 | `Proposition` | Base cho mệnh đề lưu inline (`[Serializable]`, dùng qua `[SerializeReference]`) |
-| `PropositionComp` | Base cho mệnh đề là component trong scene, kế thừa `MonoBehaviour` |
-| `PropositionSO` | Base cho mệnh đề là asset, kế thừa `ScriptableObject`; `ASSET_MENU_PATH` là `RiseOn/Propositions/` |
 
-Field nhận một mệnh đề: `[SerializeReference] IProposition` hoặc
-`SerRef<IProposition>`. Nhận nhiều: `ListSerRef<IProposition>`, không dùng
+Field nhận một mệnh đề: `[SerializeReference] IProposition`. `SerRef<IProposition>` chỉ
+cần khi mệnh đề nằm ở chỗ không gắn được attribute, như tham số kiểu của một container.
+Nhận nhiều: `ListSerRef<IProposition>`, không dùng
 `[SerializeReference] List<IProposition>` (lý do ở
 [SerRef](https://github.com/riseongamestudio/Serializables/blob/v1.0.0/Runtime/SerRef/README.md#vì-sao-dùng-listserreft)).
 
@@ -22,8 +21,8 @@ Field nhận một mệnh đề: `[SerializeReference] IProposition` hoặc
   `[TypeRegistryItem("Tên")]` cho nhãn gọn trong ô chọn type.
 - **Phép nối**: cài `IConnective` (`bool Evaluate(IReadOnlyList<IProposition>)`),
   cũng `[Serializable]`.
-- **Bản Comp / SO cho mệnh đề khác**: kế thừa `PropositionComp` / `PropositionSO`
-  và bọc một field của mệnh đề đó, như `PropositionFormulaComp`.
+- **Component hay asset tự là một mệnh đề**: cài thẳng `IProposition` lên `MonoBehaviour`
+  hay `ScriptableObject` của mình; `External` nhận mọi object cài interface này.
 
 ## Luật
 
@@ -34,9 +33,7 @@ Những điều không suy ra được từ việc đọc từng file.
 Attribute này không kế thừa. Thiếu nó thì hậu quả tuỳ chỗ chứa:
 
 - Sau `[SerializeReference]`: Unity vẫn lưu, nhưng ghi warning mỗi lần serialize.
-- Trong field `[SerializeField]` thường, như `PropositionFormula` bên trong
-  `PropositionFormulaComp` / `PropositionFormulaSO`: field đó **không được lưu**, và
-  không có báo gì.
+- Trong field `[SerializeField]` thường: field đó **không được lưu**, và không có báo gì.
 
 Kể cả lớp rỗng chỉ để đóng một generic, kiểu `HasItem : HasItem<ItemId>`.
 

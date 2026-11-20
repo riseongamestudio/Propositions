@@ -44,7 +44,7 @@ Thiếu Odin thì project báo một lỗi từ `RiseOn.Propositions.Requirement
     }
   ],
   "dependencies": {
-    "com.riseon.propositions": "1.0.3"
+    "com.riseon.propositions": "2.0.0"
   }
 }
 ```
@@ -53,23 +53,24 @@ Thiếu Odin thì project báo một lỗi từ `RiseOn.Propositions.Requirement
 *Package Manager → + → Add package from git URL*:
 
 ```
-https://github.com/riseongamestudio/Propositions.git#v1.0.3
+https://github.com/riseongamestudio/Propositions.git#v2.0.0
 ```
 
 **Thư mục local**: `"com.riseon.propositions": "file:D:/path/to/Propositions"`.
 
 ## Tổng quan
 
-Cùng một interface `IProposition`, ba dạng lưu:
+Mệnh đề là lớp `[Serializable]` cài `IProposition`, nằm inline trong field
+`[SerializeReference]` của chủ. Muốn dùng chung thì đặt cây vào một chỗ giữ, rồi trỏ tới
+nó bằng `External`:
 
-| Dạng | Dùng khi |
+| Chỗ giữ | Dùng khi |
 |---|---|
-| `Proposition` | Mặc định. Lớp `[Serializable]` thường, nằm inline trong field của chủ |
 | `PropositionComp` | Nhiều chỗ trong scene dùng chung một mệnh đề |
 | `PropositionSO` | Dùng chung giữa các scene. Asset không trỏ được vào object trong scene |
 
 Mệnh đề có sẵn: `Formula` (một phép nối `And`, `Or`, `AtLeast`, `AtMost` trên danh
-sách mệnh đề), `Not`, `True`, `False`, và `External` để nối một Comp hay SO vào cây.
+sách mệnh đề), `Not`, `True`, `False`, và `External`.
 
 ## Hướng dẫn nhanh
 
@@ -90,15 +91,15 @@ sách mệnh đề), `Not`, `True`, `False`, và `External` để nối một Co
 2. Khai field nhận mệnh đề, dựng cây trong Inspector bằng ô chọn type:
 
    ```csharp
-   [SerializeReference] private IProposition unlockCondition;   // hoặc SerRef<IProposition>
+   [SerializeReference] private IProposition unlockCondition;
    [SerializeField] private ListSerRef<IProposition> conditions; // nhiều mệnh đề
 
    if (unlockCondition.Evaluate()) { /* ... */ }
    ```
 
-3. Mệnh đề dùng chung: tạo `PropositionFormulaComp` trong scene hoặc
-   `PropositionFormulaSO` (menu *Create → RiseOn → Propositions*), rồi trỏ tới nó
-   bằng một `External` trong cây.
+3. Mệnh đề dùng chung: tạo `PropositionComp` trong scene hoặc `PropositionSO` (menu
+   *Create → RiseOn → Propositions*), dựng cây trong đó, rồi trỏ tới nó bằng một
+   `External` trong cây khác.
 
 Lớp mệnh đề nào cũng phải tự gắn `[Serializable]`, và đổi tên lớp là mất dữ liệu đã
 lưu: xem [luật khi mở rộng](Runtime/README.md).
@@ -107,8 +108,8 @@ lưu: xem [luật khi mở rộng](Runtime/README.md).
 
 | Thành phần | Việc | Chi tiết |
 |---|---|---|
-| Lớp nền | `IProposition`, `Proposition`, `PropositionComp`, `PropositionSO`; cách viết mệnh đề và luật lưu | [Runtime](Runtime/README.md) |
-| Mệnh đề có sẵn | `Formula` và các phép nối, `Not`, `True`, `False`, `External` | [Runtime/Concretes](Runtime/Concretes/README.md) |
+| Lớp nền | `IProposition`, `Proposition`; cách viết mệnh đề và luật lưu | [Runtime](Runtime/README.md) |
+| Mệnh đề có sẵn | `Formula` và các phép nối, `Not`, `True`, `False`, `External`, chỗ giữ `PropositionComp`, `PropositionSO` | [Runtime/Concretes](Runtime/Concretes/README.md) |
 
 ## Lịch sử thay đổi
 

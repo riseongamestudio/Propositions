@@ -4,6 +4,23 @@ Mọi thay đổi đáng kể của `com.riseon.propositions` được ghi ở �
 [Keep a Changelog](https://keepachangelog.com/vi/1.1.0/), đánh số theo
 [Semantic Versioning](https://semver.org/lang/vi/).
 
+## [2.0.0] - 2026-11-20
+
+### Đổi
+
+- `PropositionNot.proposition` lưu bằng `[SerializeReference]` trực tiếp thay vì `SerRef<IProposition>`,
+  như mọi field giữ một mệnh đề. Dữ liệu `Not` đã lưu không đọc được nữa: trong scene, prefab và asset,
+  bỏ một tầng `value:` dưới `proposition:` (`proposition:` → `value:` → `rid:` thành `proposition:` → `rid:`),
+  hoặc chọn lại mệnh đề trong Inspector.
+- `PropositionComp` và `PropositionSO` thôi là lớp nền trừu tượng: mỗi cái giữ một mệnh đề bất kỳ
+  (`[SerializeReference]`), để dùng chung qua `External` mà không phải bọc trong `Formula`.
+
+### Bỏ
+
+- `PropositionFormulaComp`, `PropositionFormulaSO`: thay bằng `PropositionComp`, `PropositionSO`. Component và
+  asset cũ mất script; tạo `PropositionComp` hay `PropositionSO` mới rồi dựng lại cây (Formula cũ đặt ở gốc).
+- Component hay asset kế thừa `PropositionComp`, `PropositionSO` để tự làm mệnh đề: cài thẳng `IProposition`.
+
 ## [1.0.3] - 2026-09-25
 
 ### Sửa
