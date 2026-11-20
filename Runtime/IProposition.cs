@@ -1,4 +1,4 @@
-namespace RiseOn.Propositions {
+﻿namespace RiseOn.Propositions {
     public interface IProposition {
         bool Evaluate();
     }

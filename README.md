@@ -21,13 +21,12 @@ Package `com.riseon.propositions`, namespace `RiseOn.Propositions`.
 | Phụ thuộc | Cách có | Dùng cho |
 |---|---|---|
 | Unity 6000.3 | | Bản đang dùng để phát triển |
-| [`com.riseon.utils`](https://github.com/riseongamestudio/Utils/tree/main/Core#readme) 1.0.1 | Tự cài theo `package.json` của Serializables | `com.riseon.serializables` cần |
-| [`com.riseon.serializables`](https://github.com/riseongamestudio/Serializables#readme) 1.0.1 | Tự cài theo `package.json` | `SerRef`, `ListSerRef`, `SerObject` |
 | [Odin Inspector](https://odininspector.com) | Cài tay từ Asset Store | Ô chọn type cho `[SerializeReference]`, `[TypeRegistryItem]`, `[Required]` |
+| [`com.riseon.serializables`](https://github.com/riseongamestudio/Serializables#readme) 1.0.5 | Tự cài theo `package.json` | `SerRef`, `ListSerRef`, `SerObject` |
 
-"Tự cài" là khi cài qua registry; cài bằng git URL thì phải cài các package RiseOn
-kia trước. Odin không có trên UPM nên phải cài vào project trước.
-Thiếu Odin thì project báo một lỗi từ `RiseOn.Propositions.Requirements`.
+"Tự cài" là Package Manager tự lấy theo version từ Unity Registry và các registry khai
+trong manifest, cả khi cài pack bằng git URL. Odin không có trên UPM nên phải cài vào
+project trước. Thiếu Odin thì project báo một lỗi từ `RiseOn.Propositions.Requirements`.
 
 ## Cài đặt
 
@@ -44,16 +43,17 @@ Thiếu Odin thì project báo một lỗi từ `RiseOn.Propositions.Requirement
     }
   ],
   "dependencies": {
-    "com.riseon.propositions": "2.0.0"
+    "com.riseon.propositions": "2.0.1"
   }
 }
 ```
 
-**Git URL**: cài `com.riseon.utils` và `com.riseon.serializables` trước, rồi
-*Package Manager → + → Add package from git URL*:
+**Git URL**: phụ thuộc vẫn lấy theo version từ registry: `com.riseon.utils` và
+`com.riseon.serializables` lấy từ registry RiseOn như ví dụ trên, hoặc cài bằng git URL
+trước theo thứ tự này. Rồi *Package Manager → + → Add package from git URL*:
 
 ```
-https://github.com/riseongamestudio/Propositions.git#v2.0.0
+https://github.com/riseongamestudio/Propositions.git
 ```
 
 **Thư mục local**: `"com.riseon.propositions": "file:D:/path/to/Propositions"`.

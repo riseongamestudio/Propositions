@@ -30,7 +30,7 @@ Những điều không suy ra được từ việc đọc từng file.
 
 ### `[Serializable]` phải nằm trên từng lớp cụ thể
 
-Attribute này không kế thừa. Thiếu nó thì hậu quả tuỳ chỗ chứa:
+Attribute này không kế thừa. Thiếu nó thì hậu quả tùy chỗ chứa:
 
 - Sau `[SerializeReference]`: Unity vẫn lưu, nhưng ghi warning mỗi lần serialize.
 - Trong field `[SerializeField]` thường: field đó **không được lưu**, và không có báo gì.
